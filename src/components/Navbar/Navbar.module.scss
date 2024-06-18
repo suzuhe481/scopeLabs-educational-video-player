@@ -1,0 +1,48 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 100px;
+  background-color: rgb(235, 235, 235);
+  padding: 0 16px;
+
+  //   Logo
+  a {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+
+  // Upload Button
+  .button-container {
+    .button {
+      border-radius: 12px;
+      border: none;
+
+      padding: 15px;
+      font-size: 1.2rem;
+
+      background-color: #1a73e8;
+      color: white;
+
+      cursor: pointer;
+    }
+    .button:hover {
+      background-color: #104b99;
+    }
+  }
+}
+
+/* Prevents text highlighting with cursor dragging */
+.no-highlight {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
