@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+import Router from "./Router";
+
 import "./reset.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode></React.StrictMode>
+  <React.StrictMode>
+    <Router />
+  </React.StrictMode>
 );
