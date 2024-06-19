@@ -1,0 +1,30 @@
+.videos-container {
+  display: flex;
+  flex-direction: row;
+  margin: 15px 50px;
+
+  gap: 20px;
+  flex-wrap: wrap;
+
+  .video-container {
+    width: 150px;
+
+    cursor: pointer;
+
+    .thumbnail {
+      background-color: lightblue;
+      border-radius: 20px;
+      height: 100px;
+    }
+
+    .title {
+      color: black;
+    }
+  }
+}
+
+// Removes link decorations from text
+.remove-link-style {
+  text-decoration: none;
+  color: black;
+}
