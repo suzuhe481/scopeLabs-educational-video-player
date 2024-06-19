@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Home from "./components/Home/Home";
+import UploadVideoPage from "./components/UploadVideoPage/UploadVideoPage";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -14,7 +15,7 @@ const Router = () => {
     },
     {
       path: "/upload",
-      //   element: <UploadVideoPage />,
+      element: <UploadVideoPage />,
     },
     {
       path: "/edit",
