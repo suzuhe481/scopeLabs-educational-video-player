@@ -9,7 +9,9 @@ const Navbar = () => {
         <img src={Logo}></img>
       </a>
       <div className={`${styles["button-container"]}`}>
-        <button className={`${styles["button"]}`}>Upload</button>
+        <a href="/upload">
+          <button className={`${styles["button"]}`}>Upload</button>
+        </a>
       </div>
     </div>
   );
