@@ -15,6 +15,23 @@ const Home = () => {
 
   if (JSON.stringify(videoData) !== "{}") {
     videoCollection = videoData.map((video) => {
+      const id = video.video_url.split("?v=");
+      const video_ID = id[1];
+      const video_thumbnail =
+        video_ID === undefined
+          ? false
+          : `http://img.youtube.com/vi/${video_ID}/0.jpg`;
+
+      // Sets a thumbnail for the video if it has one.
+      const thumbnailStyles = !video_thumbnail
+        ? {}
+        : {
+            backgroundImage: `url(${video_thumbnail})`,
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+          };
+
       // Converting date to user friendly string with Luxon.
       const video_created_date = new DateTime(video.created_at).toLocaleString(
         DateTime.DATE_MED
