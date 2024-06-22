@@ -65,7 +65,6 @@ const Home = () => {
 
   return (
     <div>
-      <Navbar />
       <div className="loading-container"></div>
       <div className={`${styles["videos-container"]}`}>{videoCollection}</div>
     </div>
