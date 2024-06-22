@@ -21,9 +21,8 @@ const VideoPage = () => {
   if (JSON.stringify(videoData) !== "{}" && videoData !== undefined) {
     // Gets the id of the video required for the src attribute of the iframe.
     // video_url - https://www.youtube.com/watch?v=VIDEO_ID
-    const id = videoData.video_url.split("?v=");
-    const video_ID = id[1];
-    console.log(videoData);
+    const youtubeID = videoData.video_url.split("?v=");
+    const video_ID = youtubeID[1];
 
     videoContainer = (
       <div className={`${styles["video-container"]}`}>
