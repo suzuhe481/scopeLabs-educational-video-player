@@ -10,6 +10,17 @@ import styles from "./Navbar.module.scss";
 import Logo from "../../assets/images/LOGO_ICON.png";
 
 const Navbar = () => {
+  // State variable to determine which logo to display.
+  // Logo - Desktop
+  // LogoMobile - For mobile/smaller screens
+  const [onMobile, setOnMobile] = useState(() => {
+    if (window.innerWidth < 600) {
+      return true;
+    } else {
+      return false;
+    }
+  });
+
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
       <a href="/">
