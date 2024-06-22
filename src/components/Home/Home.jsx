@@ -13,7 +13,9 @@ const Home = () => {
 
   var videoCollection = <div>No videos</div>;
 
-  if (JSON.stringify(videoData) !== "{}") {
+  // videoData is set and is not empty.
+  // Creates videoCollection element.
+  if (JSON.stringify(videoData) !== "{}" && videoData.length !== 0) {
     videoCollection = videoData.map((video) => {
       const id = video.video_url.split("?v=");
       const video_ID = id[1];
