@@ -1,5 +1,3 @@
-import Navbar from "../Navbar/Navbar";
-
 import uploadVideoUtil from "../../helpers/uploadVideoUtil";
 
 import styles from "./UploadVideoPage.module.scss";
@@ -36,12 +34,7 @@ const UploadVideoPage = () => {
     </div>
   );
 
-  return (
-    <div>
-      <Navbar />
-      {uploadFormContainer}
-    </div>
-  );
+  return <div>{uploadFormContainer}</div>;
 };
 
 export default UploadVideoPage;
