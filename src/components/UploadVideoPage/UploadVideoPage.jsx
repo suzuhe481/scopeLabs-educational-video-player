@@ -32,28 +32,34 @@ const UploadVideoPage = () => {
   const uploadFormContainer = (
     <div className={styles["form-container"]}>
       <form className={styles.form} onSubmit={uploadVideoUtil}>
-        <div className="form-title">
-          <h1>Enter Video Information</h1>
+        <div className={`${styles["form-title"]}`}>
+          <h1>Upload a video</h1>
         </div>
 
         <div className={styles["form-group-container"]}>
           <div className={styles["form-group"]}>
             <label htmlFor="title">Title</label>
-            <input type="text" name="title" />
+            <FontAwesomeIcon icon={faT} style={TitleIconStyles} />
+            <input type="text" name="title" placeholder="Title your Video" />
           </div>
 
           <div className={styles["form-group"]}>
-            <label htmlFor="url">URL</label>
-            <input type="text" name="url" />
+            <label htmlFor="url">Only YouTube Links</label>
+            <FontAwesomeIcon icon={faLink} style={LinkIconStyles} />
+            <input
+              type="text"
+              name="url"
+              placeholder="https://www.youtube.com/watch?v="
+            />
           </div>
 
           <div className={styles["form-group"]}>
-            <label htmlFor="url">description</label>
-            <textarea name="url"></textarea>
+            <label htmlFor="description">Description</label>
+            <textarea name="description"></textarea>
           </div>
         </div>
 
-        <div className="form-submit">
+        <div className={`${styles["form-submit"]}`}>
           <button type="submit">Upload</button>
         </div>
       </form>
