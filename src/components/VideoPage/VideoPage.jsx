@@ -24,6 +24,11 @@ const VideoPage = () => {
     const youtubeID = videoData.video_url.split("?v=");
     const video_ID = youtubeID[1];
 
+    // Converting date to user friendly string with Luxon.
+    const video_created_date = new DateTime(
+      videoData.created_at
+    ).toLocaleString(DateTime.DATE_MED);
+
     videoContainer = (
       <div className={`${styles["video-container"]}`}>
         <iframe
