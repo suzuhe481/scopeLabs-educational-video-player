@@ -86,3 +86,10 @@
   user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
+
+// Removes link decorations from text
+.remove-link-style {
+  text-decoration: none;
+  color: black;
+}
+
