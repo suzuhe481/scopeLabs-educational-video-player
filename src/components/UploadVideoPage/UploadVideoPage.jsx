@@ -1,5 +1,9 @@
 import uploadVideoUtil from "../../helpers/uploadVideoUtil";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faT } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
+
 import styles from "./UploadVideoPage.module.scss";
 
 const UploadVideoPage = () => {
