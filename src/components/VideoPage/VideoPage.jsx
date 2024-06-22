@@ -80,8 +80,15 @@ const VideoPage = () => {
 
   return (
     <div>
-      <Navbar />
-      {videoContainer}
+      <div className={`${styles["page-container"]}`}>
+        <div className={`${styles["main-content"]}`}>
+          {videoContainer}
+          <CommentsContainer />
+        </div>
+        <div className={`${styles["more-videos-container"]}`}>
+          <SideVideosContainer />
+        </div>
+      </div>
     </div>
   );
 };
