@@ -39,6 +39,7 @@ const VideoPage = () => {
     );
   }
 
+  // Calls API to get video information.
   useEffect(() => {
     const data = fetchSingleVideoUtil(id);
     data
