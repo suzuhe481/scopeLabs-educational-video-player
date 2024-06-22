@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import Logo from "../../assets/images/FULL_LOGO_DARK.png";
+import LogoMobile from "../../assets/images/LOGO_ICON.png";
 
 import styles from "./Navbar.module.scss";
 
