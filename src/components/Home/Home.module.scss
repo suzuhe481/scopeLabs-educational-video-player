@@ -80,3 +80,20 @@
   text-decoration: none;
   color: black;
 }
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  // Videos are displayed horizontally and wraps.
+  .videos-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .video-container {
+      width: 35rem;
+
+      .title {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
