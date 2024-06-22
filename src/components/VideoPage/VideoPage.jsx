@@ -60,6 +60,10 @@ const VideoPage = () => {
         </div>
       </div>
     );
+  } else {
+    videoContainer = (
+      <div className={`${styles["video-not-exist"]}`}>Video does not exist</div>
+    );
   }
 
   // Calls API to get video information.
