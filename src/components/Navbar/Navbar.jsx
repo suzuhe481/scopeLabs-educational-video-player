@@ -7,8 +7,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Navbar.module.scss";
 
-import Logo from "../../assets/images/LOGO_ICON.png";
-
 const Navbar = () => {
   // State variable to determine which logo to display.
   // Logo - Desktop
