@@ -7,6 +7,28 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import styles from "./UploadVideoPage.module.scss";
 
 const UploadVideoPage = () => {
+  // Styles for title icon
+  const TitleIconStyles = {
+    position: "absolute",
+    bottom: "10px",
+    left: "12px",
+
+    color: "#5f6368",
+
+    fontSize: "1rem",
+  };
+
+  // Styles for link icon
+  const LinkIconStyles = {
+    position: "absolute",
+    bottom: "10px",
+    left: "8px",
+
+    color: "#5f6368",
+
+    fontSize: "0.8rem",
+  };
+
   const uploadFormContainer = (
     <div className={styles["form-container"]}>
       <form className={styles.form} onSubmit={uploadVideoUtil}>
