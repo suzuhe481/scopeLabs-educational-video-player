@@ -29,13 +29,8 @@ const Home = () => {
     });
   }
 
-  // Calls APi to retrieve videos for home page.
+  // Calls API to retrieve videos for home page and stores in state.
   useEffect(() => {
-    /* Response Object shape
-    {
-      videos: []
-    }
-    */
     const data = fetchAllVideosUtil();
     data
       .then((results) => {
