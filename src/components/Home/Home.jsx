@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import fetchAllVideosUtil from "../../helpers/fetchAllVideosUtil";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faComment } from "@fortawesome/free-solid-svg-icons";
+
 import Navbar from "../Navbar/Navbar";
 import styles from "./Home.module.scss";
 
