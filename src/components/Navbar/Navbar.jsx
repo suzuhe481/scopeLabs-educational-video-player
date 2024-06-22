@@ -35,12 +35,21 @@ const Navbar = () => {
 
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
+      <div className={`${styles["search-container"]}`}>
+        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
+        <input type="text" placeholder="Search Videos..." />
+      </div>
+
       <a href="/">
-        <img src={Logo}></img>
+        <img src={`${onMobile ? LogoMobile : Logo}`}></img>
       </a>
+
       <div className={`${styles["button-container"]}`}>
-        <a href="/upload">
-          <button className={`${styles["button"]}`}>Upload</button>
+        <a
+          href="/upload"
+          className={`${styles["button"]} ${styles["remove-link-style"]}`}
+        >
+          Upload
         </a>
       </div>
     </div>
