@@ -80,7 +80,9 @@ const Home = () => {
   return (
     <div>
       <div className="loading-container"></div>
-      <div className={`${styles["videos-container"]}`}>{videoCollection}</div>
+      <div className={`${styles["main-content"]}`}>
+        <div className={`${styles["videos-container"]}`}>{videoCollection}</div>
+      </div>
     </div>
   );
 };
