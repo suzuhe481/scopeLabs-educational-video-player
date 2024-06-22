@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { DateTime } from "luxon";
 
-import Navbar from "../Navbar/Navbar";
+import CommentsContainer from "./CommentsContainer/CommentsContainer";
+import SideVideosContainer from "./SideVideosContainer/SideVideosContainer";
 import fetchSingleVideoUtil from "../../helpers/fetchSingleVideoUtil";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
