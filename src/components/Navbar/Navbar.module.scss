@@ -93,3 +93,13 @@
   color: black;
 }
 
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .navbar {
+    .search-container {
+      input {
+        width: 100%;
+      }
+    }
+  }
+}
