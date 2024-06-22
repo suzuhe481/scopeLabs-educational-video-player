@@ -28,6 +28,10 @@ const Navbar = () => {
     }
   };
 
+  // Adds eventListener for changing screen size.
+  useEffect(() => {
+    window.addEventListener("resize", handleScreenSizeChange);
+  });
 
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
