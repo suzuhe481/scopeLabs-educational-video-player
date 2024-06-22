@@ -1,0 +1,203 @@
+.main {
+  background-color: rgb(245, 245, 245);
+  padding-top: 50px;
+
+  .original-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+
+      padding: 15px;
+
+      font-family: sans-serif;
+      font-size: 1.4rem;
+
+      background-color: white;
+      box-shadow: 0px 3px 5px #dbdbdb;
+      border-radius: 10px;
+      border: 1px solid black;
+
+      width: 85vw;
+
+      .info-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .info-title {
+          font-weight: bold;
+        }
+      }
+
+      // Paste Button
+      .paste-button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+
+        button {
+          width: 40%;
+          border-radius: 100px;
+          border: none;
+
+          padding: 8px 12px;
+          font-size: 1rem;
+
+          background-color: #00b6ef;
+          color: white;
+
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #104b99;
+        }
+      }
+    }
+  }
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 50px;
+
+  height: 100vh;
+  width: 100%;
+
+  font-family: sans-serif;
+  font-size: 1.5rem;
+
+  form {
+    width: 80vw;
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px #dbdbdb;
+
+    padding: 15px;
+
+    background-color: white;
+  }
+
+  .form-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px 0;
+  }
+
+  .form-group {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1px 0;
+    gap: 10px;
+
+    input {
+      background-color: #dbdbdb;
+
+      padding: 8px 12px;
+      padding-left: 30px; // Gives space for the search icon.
+
+      border-radius: 100px;
+      border: 1px solid transparent;
+    }
+
+    /* Highlights focused input. */
+    input:focus {
+      border: 1px solid black;
+    }
+
+    textarea {
+      height: 200px;
+      padding: 8px;
+
+      font-size: 1.2rem;
+
+      resize: vertical;
+    }
+  }
+
+  // Upload Button
+  .form-submit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    button {
+      border-radius: 100px;
+      border: none;
+
+      padding: 8px 12px;
+      font-size: 1rem;
+
+      background-color: #00b6ef;
+      color: white;
+
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #104b99;
+    }
+  }
+}
+
+.account-create-container {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-size: 2rem;
+  margin: 10px 0;
+
+  cursor: pointer;
+
+  a {
+    text-decoration: none;
+    color: black;
+    padding: 4px 8px;
+    border-radius: 100px;
+    border: 1px solid black;
+  }
+
+  a:hover {
+    background-color: #c7deff;
+  }
+}
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .main {
+    .original-info-container {
+      .info {
+        width: 600px;
+      }
+    }
+  }
+
+  .form-container {
+    font-size: 2rem;
+
+    form {
+      width: 500px;
+    }
+  }
+}
