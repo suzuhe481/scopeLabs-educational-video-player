@@ -45,8 +45,21 @@ const Home = () => {
             href={`video/${video.id}`}
             className={`${styles["remove-link-style"]}`}
           >
-            <div className={styles.thumbnail}></div>
-            <div className={styles.title}>{video.title}</div>
+            <div className={styles.thumbnail} style={thumbnailStyles}></div>
+            <div className={`${styles["info-container"]}`}>
+              <div className={styles.title}>{video.title}</div>
+              <div>
+                {video.user_id} • {video_created_date}
+              </div>
+              <FontAwesomeIcon
+                icon={faComment}
+                className={`${styles["comment-icon"]}`}
+              />
+              <div className={`${styles["comment-text"]}`}>
+                {video.num_comments}{" "}
+                {video.num_comments === 1 ? "comment" : "comments"}
+              </div>
+            </div>
           </a>
         </div>
       );
