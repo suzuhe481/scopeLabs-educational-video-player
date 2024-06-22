@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import styles from "./Navbar.module.scss";
 
 import Logo from "../../assets/images/LOGO_ICON.png";
