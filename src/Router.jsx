@@ -3,6 +3,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./components/Home/Home";
 import UploadVideoPage from "./components/UploadVideoPage/UploadVideoPage";
 import VideoPage from "./components/VideoPage/VideoPage";
+import EditVideoPage from "./components/EditVideoPage/EditVideoPage";
+
 const Router = () => {
   const router = createBrowserRouter([
     {
@@ -18,8 +20,8 @@ const Router = () => {
       element: <UploadVideoPage />,
     },
     {
-      path: "/edit",
-      //   element: <EditVideoPage />,
+      path: "/edit/video/:id",
+      element: <EditVideoPage />,
     },
   ]);
 
