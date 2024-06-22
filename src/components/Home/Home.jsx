@@ -15,6 +15,11 @@ const Home = () => {
 
   if (JSON.stringify(videoData) !== "{}") {
     videoCollection = videoData.map((video) => {
+      // Converting date to user friendly string with Luxon.
+      const video_created_date = new DateTime(video.created_at).toLocaleString(
+        DateTime.DATE_MED
+      );
+
       return (
         <div className={`${styles["video-container"]}`} key={video.id}>
           <a
