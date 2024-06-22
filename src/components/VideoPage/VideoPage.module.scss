@@ -1,0 +1,99 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 32px;
+  gap: 32px;
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2 1 0; // Works with .more-videos-container's flex property to give a 2:1 ratio
+
+    // Video error element
+    .video-not-exist {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      font-size: 2rem;
+      font-weight: bold;
+
+      aspect-ratio: 16 / 9;
+      width: 100%;
+
+      background: linear-gradient(0deg, rgb(103, 154, 211), rgb(154, 242, 219));
+      border-radius: 20px;
+    }
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    iframe {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+
+      border-radius: 10px;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 12px;
+
+    width: 100%;
+
+    font-family: sans-serif;
+
+    margin-top: 20px;
+    padding: 5px 0;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: black;
+    }
+
+    .user-date-edit {
+      font-size: 1.2rem;
+      .edit-icon {
+        color: #5f6368;
+      }
+    }
+    .comment-icon {
+      position: absolute;
+      left: 32px;
+
+      color: #5f6368;
+
+      font-size: 1rem;
+    }
+
+    .comment-text {
+      padding-left: 24px; // Gives space for the icon.
+    }
+  }
+
+  .more-videos-container {
+    flex: 1 1 0; // Works with .main-content's flex property to give a 2:1 ratio
+  }
+}
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .page-container {
+    flex-direction: row;
+  }
+}
