@@ -19,6 +19,16 @@ const Navbar = () => {
     }
   });
 
+  // Sets state to determine if user is on a small screen (mobile).
+  const handleScreenSizeChange = () => {
+    if (window.innerWidth < 600) {
+      setOnMobile(true);
+    } else {
+      setOnMobile(false);
+    }
+  };
+
+
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
       <a href="/">
