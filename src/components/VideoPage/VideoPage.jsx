@@ -37,8 +37,27 @@ const VideoPage = () => {
           allow="fullscreen"
         />
 
-        <div className={styles.title}>{videoData.title}</div>
-        <div className={styles.description}>{videoData.description}</div>
+        <div className={`${styles["info-container"]}`}>
+          <div className={styles.title}>{videoData.title}</div>
+          <div className={`${styles["user-date-edit"]}`}>
+            {videoData.user_id} • {video_created_date}{" "}
+            <a href={`/edit/video/${id}`}>
+              <FontAwesomeIcon
+                icon={faPenToSquare}
+                className={`${styles["edit-icon"]}`}
+              />
+            </a>
+          </div>
+          <div className={styles.description}>{videoData.description}</div>
+          <div className={`${styles["comment-text"]}`}>
+            <FontAwesomeIcon
+              icon={faComment}
+              className={`${styles["comment-icon"]}`}
+            />
+            {videoData.num_comments}{" "}
+            {videoData.num_comments === 1 ? "comment" : "comments"}
+          </div>
+        </div>
       </div>
     );
   }
