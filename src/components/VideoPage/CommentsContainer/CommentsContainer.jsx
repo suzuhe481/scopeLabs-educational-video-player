@@ -13,6 +13,8 @@ import styles from "./CommentsContainer.module.scss";
 const CommentsContainer = () => {
   const { id } = useParams();
   const [commentData, setCommentData] = useState({});
+  const [submitDisabled, setSubmitDisabled] = useState(false);
+  const [commentFormVisited, setCommentFormVisited] = useState(false);
 
   var commentCollection = <div>Loading comments...</div>;
 
