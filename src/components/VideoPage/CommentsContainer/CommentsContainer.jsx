@@ -37,7 +37,9 @@ const CommentsContainer = () => {
             <div className={styles.icon}>{comment.user_id.substring(0, 1)}</div>
             <div className={styles.user}>{comment.user_id}</div>
             <div>•</div>
-            <div className={styles.date}>{comment_created_date}</div>
+            <div className={styles.date}>
+              {comment_created_date} {comment_created_time}
+            </div>
           </div>
           <div className={`${styles["comment-content"]}`}>
             {comment.content}
