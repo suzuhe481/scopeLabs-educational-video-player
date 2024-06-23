@@ -70,6 +70,23 @@ const CommentsContainer = () => {
       });
   };
 
+  // Handles comment form submit.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setSubmitDisabled(true);
+    submitCommentUtil(e);
+
+    // Short delay after submitting comment with API call..
+    // Clear comment form, re-enable submit button, refresh comments.
+    setTimeout(() => {
+      commentFormRef.current.value = "";
+      setSubmitDisabled(false);
+      setCommentFormVisited(false);
+      refreshComments();
+    }, 1000);
+  };
+
   // Calls function to get video comments on page load.
   useEffect(() => {
     refreshComments();
