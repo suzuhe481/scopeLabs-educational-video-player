@@ -15,6 +15,7 @@ const CommentsContainer = () => {
   const [commentData, setCommentData] = useState({});
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const [commentFormVisited, setCommentFormVisited] = useState(false);
+  const commentFormRef = useRef(null);
 
   var commentCollection = <div>Loading comments...</div>;
 
