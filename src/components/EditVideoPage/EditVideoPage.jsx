@@ -10,7 +10,7 @@ import { faT } from "@fortawesome/free-solid-svg-icons";
 import styles from "./EditVideoPage.module.scss";
 
 const EditVideoPage = () => {
-  const [videoData, setVideoData] = useState({});
+  const [videoData, setVideoData] = useState(false);
   const { id } = useParams();
   const formRef = useRef(null);
 
