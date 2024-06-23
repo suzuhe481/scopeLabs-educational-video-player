@@ -75,13 +75,19 @@ const SideVideosContainer = () => {
     const data = fetchAllVideosUtil();
     data
       .then((results) => {
-        const filteredVideos = results.videos.filter(
-          (video) => video.id !== id
-        );
+        return results.videos;
+      })
+      .then((videos) => {
+        const filteredVideos = videos.filter((video) => video.id !== id);
+
+        return filteredVideos;
+      })
+      .then((filteredVideos) => {
         setVideoData(filteredVideos);
       })
       .catch((error) => {
         console.log(error);
+        setVideoData(false);
       });
   }, []);
 
