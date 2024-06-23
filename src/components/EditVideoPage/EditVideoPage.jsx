@@ -23,7 +23,7 @@ const EditVideoPage = () => {
     formRef.current["description"].value = DESCRIPTION;
   };
 
-  if (JSON.stringify(videoData) !== "{}") {
+  if (videoData) {
     pasteToForm();
   }
 
