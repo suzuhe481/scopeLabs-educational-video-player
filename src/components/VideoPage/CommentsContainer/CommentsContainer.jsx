@@ -26,6 +26,11 @@ const CommentsContainer = () => {
         comment.created_at
       ).toLocaleString(DateTime.DATE_MED);
 
+      // Converting time to user friendly string with Luxon.
+      const comment_created_time = DateTime.fromISO(
+        comment.created_at
+      ).toLocaleString(DateTime.TIME_SIMPLE);
+
       return (
         <div className={`${styles["comment-container"]}`} key={comment.id}>
           <div className={`${styles["comment-data"]}`}>
