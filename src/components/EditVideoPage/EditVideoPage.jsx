@@ -101,10 +101,18 @@ const EditVideoPage = () => {
     const data = fetchSingleVideoUtil(id);
     data
       .then((results) => {
-        setVideoData(results.video);
+        if (results.error) {
+          throw new Error("Error: Video not found");
+        }
+        return results.video;
+      })
+      .then((video) => {
+        setVideoData(video);
+        return video;
       })
       .catch((error) => {
         console.log(error);
+        setVideoData(false);
       });
   }, []);
 
