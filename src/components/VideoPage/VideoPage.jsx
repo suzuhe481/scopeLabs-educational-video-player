@@ -132,15 +132,21 @@ const VideoPage = () => {
   }
 
   // Calls API to get video information.
+  // Mimics a 1.5 second load time.
   useEffect(() => {
-    const data = fetchSingleVideoUtil(id);
-    data
-      .then((results) => {
-        setVideoData(results.video);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    const DELAY_SECONDS = 1.5; // Can change
+    const DELAY = DELAY_SECONDS * 1000; // Don't change
+
+    setTimeout(() => {
+      const data = fetchSingleVideoUtil(id);
+      data
+        .then((results) => {
+          setVideoData(results.video);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }, DELAY);
   }, []);
 
   return (
