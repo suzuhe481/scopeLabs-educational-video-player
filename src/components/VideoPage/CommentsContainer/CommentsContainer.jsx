@@ -87,7 +87,9 @@ const CommentsContainer = () => {
           onFocus={handleCommentVisited}
         />
         <input type="hidden" name="name_default" value={id} />
-        <button type="submit">Comment</button>
+        <button type="submit" disabled={submitDisabled}>
+          Comment
+        </button>
       </form>
       <div className={styles.commentCollection}>{commentCollection}</div>
     </div>
