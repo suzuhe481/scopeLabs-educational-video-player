@@ -13,7 +13,7 @@ import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import styles from "./VideoPage.module.scss";
 
 const VideoPage = () => {
-  const [videoData, setVideoData] = useState({});
+  const [videoData, setVideoData] = useState(false);
   const { id } = useParams();
 
   var videoContainer = <div>Video Loading</div>;
