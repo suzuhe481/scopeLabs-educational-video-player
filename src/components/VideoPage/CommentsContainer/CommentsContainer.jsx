@@ -19,7 +19,7 @@ const CommentsContainer = () => {
 
   var commentCollection = <div>Loading comments...</div>;
 
-  if (JSON.stringify(commentData) !== "{}") {
+  if (commentData) {
     commentCollection = commentData.map((comment) => {
       // Converting date to user friendly string with Luxon.
       const comment_created_date = new DateTime(
