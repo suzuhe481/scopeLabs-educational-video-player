@@ -40,9 +40,11 @@ const Navbar = () => {
         <input type="text" placeholder="Search Videos..." />
       </div>
 
-      <a href="/">
-        <img src={`${onMobile ? LogoMobile : Logo}`}></img>
-      </a>
+      <div className={`${styles["logo-container"]}`}>
+        <a href="/">
+          <img src={`${onMobile ? LogoMobile : Logo}`}></img>
+        </a>
+      </div>
 
       <div className={`${styles["button-container"]}`}>
         <a
