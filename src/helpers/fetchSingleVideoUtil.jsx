@@ -5,7 +5,9 @@ const fetchSingleVideoUtil = (video_id) => {
   // The "/api" url is a proxy that is set up with Vite's server proxy rules in the vite.config.js file.
   // Will use proxy URL if in dev mode.
   const BASE_URL =
-    import.meta.env.VITE_DEV === "true" ? "/api" : import.meta.env.PROD_URL;
+    import.meta.env.VITE_DEV === "true"
+      ? "/api"
+      : import.meta.env.VITE_PROD_URL;
   const PARAMS = `/${RESOURCE}/single?video_id=${video_id}`;
   const URL = `${BASE_URL}${PARAMS}`;
 
