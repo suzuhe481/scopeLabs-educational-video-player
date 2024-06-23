@@ -35,6 +35,19 @@ const VideoPage = () => {
   grid.register();
   lineSpinner.register();
 
+  // Returns a random HEX color code.
+  function getRandomColor() {
+    var letters = "0123456789ABCDEF";
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+
+  // Random color for loading animation.
+  const COLOR = getRandomColor();
+
   // Declaring video container
   var videoContainer;
 
