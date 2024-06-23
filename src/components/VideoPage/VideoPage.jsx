@@ -16,7 +16,9 @@ const VideoPage = () => {
   const [videoData, setVideoData] = useState(false);
   const { id } = useParams();
 
-  var videoContainer = <div>Video Loading</div>;
+
+  // Declaring video container
+  var videoContainer;
 
   if (JSON.stringify(videoData) !== "{}" && videoData !== undefined) {
     // Gets the id of the video required for the src attribute of the iframe.
