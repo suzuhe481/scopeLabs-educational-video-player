@@ -63,10 +63,14 @@ const CommentsContainer = () => {
     const data = fetchVideoCommentsUtil(id);
     data
       .then((results) => {
-        setCommentData(results.comments);
+        return results.comments;
+      })
+      .then((comments) => {
+        setCommentData(comments);
       })
       .catch((error) => {
         console.log(error);
+        setCommentData(false);
       });
   };
 
