@@ -40,7 +40,6 @@ const uploadVideoUtil = (event) => {
     .then((json) => {
       console.log(json);
       window.location.href = "/";
-      // return json;
     })
     .catch((error) => {
       const errorMessage = {
