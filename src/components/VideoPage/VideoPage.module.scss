@@ -11,7 +11,8 @@
     flex: 2 1 0; // Works with .more-videos-container's flex property to give a 2:1 ratio
 
     // Video error element
-    .video-not-exist {
+    .video-not-exist,
+    .video-loading {
       display: flex;
       justify-content: center;
       align-items: center;
