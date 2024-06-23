@@ -141,7 +141,10 @@ const VideoPage = () => {
       const data = fetchSingleVideoUtil(id);
       data
         .then((results) => {
-          setVideoData(results.video);
+          return results.video;
+        })
+        .then((video) => {
+          setVideoData(video);
         })
         .catch((error) => {
           console.log(error);
