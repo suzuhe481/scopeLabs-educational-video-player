@@ -129,6 +129,16 @@ const VideoPage = () => {
     videoContainer = (
       <div className={`${styles["video-not-exist"]}`}>Video does not exist</div>
     );
+  } else {
+    // Displays a random loading animation.
+    const loadingAnimationNum = Math.floor(
+      Math.random() * animationsArray.length
+    );
+    const chosenAnimation = animationsArray[loadingAnimationNum];
+
+    videoContainer = (
+      <div className={`${styles["video-loading"]}`}>{chosenAnimation}</div>
+    );
   }
 
   // Calls API to get video information.
