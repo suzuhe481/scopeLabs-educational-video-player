@@ -48,6 +48,27 @@ const VideoPage = () => {
   // Random color for loading animation.
   const COLOR = getRandomColor();
 
+  // Loading animation elements.
+  const waveformAnimation = (
+    <l-waveform size={100} stroke={10} color={COLOR}></l-waveform>
+  );
+  const trefoiAnimation = (
+    <l-trefoil size={100} stroke={10} color={COLOR}></l-trefoil>
+  );
+  const helixAnimation = (
+    <l-helix size={100} stroke={10} color={COLOR}></l-helix>
+  );
+  const quantumAnimation = (
+    <l-quantum size={100} stroke={10} color={COLOR}></l-quantum>
+  );
+  const infinityAnimation = (
+    <l-infinity size={100} stroke={10} color={COLOR}></l-infinity>
+  );
+  const gridAnimation = <l-grid size={100} stroke={10} color={COLOR}></l-grid>;
+  const lineSpinnerAnimation = (
+    <l-line-spinner size={100} stroke={10} color={COLOR}></l-line-spinner>
+  );
+
   // Declaring video container
   var videoContainer;
 
