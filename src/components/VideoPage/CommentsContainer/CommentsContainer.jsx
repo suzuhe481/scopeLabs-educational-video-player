@@ -94,6 +94,7 @@ const CommentsContainer = () => {
   // Calls function to get video comments on page load.
   useEffect(() => {
     refreshComments();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

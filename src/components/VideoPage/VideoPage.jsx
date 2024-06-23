@@ -160,6 +160,7 @@ const VideoPage = () => {
           console.log(error);
         });
     }, DELAY);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

@@ -89,6 +89,7 @@ const SideVideosContainer = () => {
         console.log(error);
         setVideoData(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
