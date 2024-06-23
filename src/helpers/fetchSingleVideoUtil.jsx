@@ -27,7 +27,12 @@ const fetchSingleVideoUtil = (video_id) => {
       return json;
     })
     .catch((error) => {
-      return error;
+      const errorMessage = {
+        error: true,
+        msg: error,
+      };
+
+      return errorMessage;
     });
 };
 

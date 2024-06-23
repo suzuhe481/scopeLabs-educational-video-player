@@ -38,10 +38,14 @@ const editVideoUtil = (event) => {
     .then((json) => {
       console.log(json);
       window.location.href = "/";
-      // return json;
     })
     .catch((error) => {
-      return error;
+      const errorMessage = {
+        error: true,
+        msg: error,
+      };
+
+      return errorMessage;
     });
 };
 
