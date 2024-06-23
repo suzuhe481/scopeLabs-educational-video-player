@@ -40,7 +40,7 @@
       align-items: center;
 
       width: 80%;
-      height: 2rem;
+      min-height: 2rem;
 
       resize: vertical;
 
@@ -57,6 +57,9 @@
     textarea:focus {
       border-radius: 30px;
       border-top-left-radius: 0;
+      height: 100px;
+    }
+    textarea.visited {
       height: 100px;
     }
 
@@ -116,7 +119,12 @@
         }
 
         .user {
+          font-size: 1.2rem;
           font-weight: bold;
+        }
+
+        .date {
+          font-size: 0.8rem;
         }
       }
 
@@ -144,6 +152,12 @@
 
         background-color: white;
         font-size: 1.2rem;
+      }
+    }
+
+    .comment-data {
+      .date {
+        font-size: 1.4rem;
       }
     }
   }
