@@ -125,7 +125,7 @@ const VideoPage = () => {
         </div>
       </div>
     );
-  } else {
+  } else if (typeof videoData === "undefined") {
     videoContainer = (
       <div className={`${styles["video-not-exist"]}`}>Video does not exist</div>
     );
