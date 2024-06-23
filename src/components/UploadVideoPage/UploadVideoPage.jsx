@@ -40,7 +40,12 @@ const UploadVideoPage = () => {
           <div className={styles["form-group"]}>
             <label htmlFor="title">Title</label>
             <FontAwesomeIcon icon={faT} style={TitleIconStyles} />
-            <input type="text" name="title" placeholder="Title your Video" />
+            <input
+              type="text"
+              name="title"
+              placeholder="Title your Video"
+              required
+            />
           </div>
 
           <div className={styles["form-group"]}>
@@ -50,12 +55,13 @@ const UploadVideoPage = () => {
               type="text"
               name="url"
               placeholder="https://www.youtube.com/watch?v="
+              required
             />
           </div>
 
           <div className={styles["form-group"]}>
             <label htmlFor="description">Description</label>
-            <textarea name="description"></textarea>
+            <textarea name="description" required />
           </div>
         </div>
 
