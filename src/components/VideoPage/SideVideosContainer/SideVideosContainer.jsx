@@ -10,7 +10,7 @@ import fetchAllVideosUtil from "../../../helpers/fetchAllVideosUtil";
 import styles from "./SideVideosContainer.module.scss";
 
 const SideVideosContainer = () => {
-  const [videoData, setVideoData] = useState({});
+  const [videoData, setVideoData] = useState([]);
   const { id } = useParams();
 
   var videoCollection = <div>No videos</div>;
