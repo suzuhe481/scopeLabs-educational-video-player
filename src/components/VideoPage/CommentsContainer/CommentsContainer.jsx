@@ -83,6 +83,7 @@ const CommentsContainer = () => {
           name="comment"
           placeholder="Add your comment..."
           required
+          className={`${commentFormVisited ? styles.visited : ""}`}
           onFocus={handleCommentVisited}
         />
         <input type="hidden" name="name_default" value={id} />
