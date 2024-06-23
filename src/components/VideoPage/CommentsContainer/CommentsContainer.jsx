@@ -97,7 +97,7 @@ const CommentsContainer = () => {
       <div className={`${styles["num-comments"]}`}>
         Comments • {commentData.length}
       </div>
-      <form onSubmit={submitCommentUtil} className={styles.form}>
+      <form onSubmit={handleSubmit} className={styles.form}>
         <FontAwesomeIcon icon={faCommentMedical} className={styles.icon} />
         <textarea
           ref={commentFormRef}
