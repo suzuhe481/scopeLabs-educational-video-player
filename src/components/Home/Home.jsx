@@ -70,10 +70,14 @@ const Home = () => {
     const data = fetchAllVideosUtil();
     data
       .then((results) => {
-        setVideoData(results.videos);
+        return results.videos;
+      })
+      .then((videos) => {
+        setVideoData(videos);
       })
       .catch((error) => {
         console.log(error);
+        setVideoData(false);
       });
   }, []);
 
