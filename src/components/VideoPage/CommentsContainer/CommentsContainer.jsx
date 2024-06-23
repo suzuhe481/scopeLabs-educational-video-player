@@ -53,6 +53,11 @@ const CommentsContainer = () => {
     commentCollection = <div>No comments</div>;
   }
 
+  // Runs when comment textarea has been focused.
+  const handleCommentVisited = () => {
+    setCommentFormVisited(true);
+  };
+
   // Calls API to retrieve comments for this video.
   useEffect(() => {
     const data = fetchVideoCommentsUtil(id);
