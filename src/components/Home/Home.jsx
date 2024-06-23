@@ -8,7 +8,7 @@ import { faComment } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Home.module.scss";
 
 const Home = () => {
-  const [videoData, setVideoData] = useState({});
+  const [videoData, setVideoData] = useState([]);
 
   var videoCollection = <div>No videos</div>;
 
