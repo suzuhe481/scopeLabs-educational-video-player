@@ -34,7 +34,9 @@ const uploadVideoUtil = (event) => {
       return response.json();
     })
     .then((json) => {
-      return json;
+      console.log(json);
+      window.location.href = "/";
+      // return json;
     })
     .catch((error) => {
       return error;
