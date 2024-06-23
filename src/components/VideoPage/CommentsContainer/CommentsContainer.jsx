@@ -12,7 +12,7 @@ import styles from "./CommentsContainer.module.scss";
 
 const CommentsContainer = () => {
   const { id } = useParams();
-  const [commentData, setCommentData] = useState({});
+  const [commentData, setCommentData] = useState(false);
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const [commentFormVisited, setCommentFormVisited] = useState(false);
   const commentFormRef = useRef(null);
