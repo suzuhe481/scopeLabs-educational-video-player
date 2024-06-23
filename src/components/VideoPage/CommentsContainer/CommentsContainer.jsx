@@ -58,8 +58,8 @@ const CommentsContainer = () => {
     setCommentFormVisited(true);
   };
 
-  // Calls API to retrieve comments for this video.
-  useEffect(() => {
+  // Calls API to retrieve comments for video with given id.
+  const refreshComments = () => {
     const data = fetchVideoCommentsUtil(id);
     data
       .then((results) => {
@@ -68,6 +68,11 @@ const CommentsContainer = () => {
       .catch((error) => {
         console.log(error);
       });
+  };
+
+  // Calls function to get video comments on page load.
+  useEffect(() => {
+    refreshComments();
   }, []);
 
   return (
