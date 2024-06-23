@@ -10,6 +10,16 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faComment } from "@fortawesome/free-solid-svg-icons";
 import { faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 
+import {
+  waveform,
+  trefoil,
+  helix,
+  quantum,
+  infinity,
+  grid,
+  lineSpinner,
+} from "ldrs";
+
 import styles from "./VideoPage.module.scss";
 
 const VideoPage = () => {
