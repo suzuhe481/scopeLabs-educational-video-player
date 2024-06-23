@@ -69,6 +69,17 @@ const VideoPage = () => {
     <l-line-spinner size={100} stroke={10} color={COLOR}></l-line-spinner>
   );
 
+  // Array containing all loading animations.
+  const animationsArray = [
+    waveformAnimation,
+    trefoiAnimation,
+    helixAnimation,
+    quantumAnimation,
+    infinityAnimation,
+    gridAnimation,
+    lineSpinnerAnimation,
+  ];
+
   // Declaring video container
   var videoContainer;
 
