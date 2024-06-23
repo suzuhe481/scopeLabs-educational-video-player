@@ -78,6 +78,7 @@ const CommentsContainer = () => {
       <form onSubmit={submitCommentUtil} className={styles.form}>
         <FontAwesomeIcon icon={faCommentMedical} className={styles.icon} />
         <textarea
+          ref={commentFormRef}
           type="text"
           name="comment"
           placeholder="Add your comment..."
