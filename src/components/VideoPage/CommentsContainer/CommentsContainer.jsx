@@ -82,6 +82,7 @@ const CommentsContainer = () => {
           name="comment"
           placeholder="Add your comment..."
           required
+          onFocus={handleCommentVisited}
         />
         <input type="hidden" name="name_default" value={id} />
         <button type="submit">Comment</button>
