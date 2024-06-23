@@ -26,6 +26,14 @@ const VideoPage = () => {
   const [videoData, setVideoData] = useState(false);
   const { id } = useParams();
 
+  // Registering/defining animations.
+  waveform.register();
+  trefoil.register();
+  helix.register();
+  quantum.register();
+  infinity.register();
+  grid.register();
+  lineSpinner.register();
 
   // Declaring video container
   var videoContainer;
