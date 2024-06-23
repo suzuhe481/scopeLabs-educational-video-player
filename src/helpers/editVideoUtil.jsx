@@ -37,7 +37,9 @@ const editVideoUtil = (event) => {
     })
     .then((json) => {
       console.log(json);
-      window.location.href = "/";
+
+      // Redirects to video.
+      window.location.href = `/video/${VIDEO_ID}`;
     })
     .catch((error) => {
       const errorMessage = {
