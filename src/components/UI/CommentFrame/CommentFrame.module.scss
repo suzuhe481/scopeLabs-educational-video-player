@@ -1,0 +1,56 @@
+// Styling for a single comment
+.comment-container {
+  .comment-data {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 10px;
+
+    // User icon
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 1rem;
+
+      width: 25px;
+      height: 25px;
+      background: linear-gradient(0deg, rgb(118, 118, 188), rgb(211, 211, 211));
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .user {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    .date {
+      font-size: 0.8rem;
+    }
+  }
+
+  .comment-content {
+    width: fit-content;
+
+    font-size: 1.4rem;
+    margin-left: 35px;
+
+    padding: 12px;
+    border-radius: 0 30px 30px 30px;
+    background-color: #dbdbdb;
+  }
+}
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .comment-container {
+    .comment-data {
+      .date {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
