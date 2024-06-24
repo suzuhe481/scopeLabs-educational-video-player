@@ -86,10 +86,6 @@
       padding-left: 24px; // Gives space for the icon.
     }
   }
-
-  .more-videos-container {
-    flex: 1 1 0; // Works with .main-content's flex property to give a 2:1 ratio
-  }
 }
 
 /* Stylings for desktops */
@@ -99,5 +95,14 @@
 
     padding: 0 32px;
     padding-bottom: 50px;
+
+    .more-videos-container {
+      flex: 1 1 0; // Works with .main-content's flex property to give a 2:1 ratio
+
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }
