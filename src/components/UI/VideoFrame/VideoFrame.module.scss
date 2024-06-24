@@ -1,0 +1,108 @@
+.video-container {
+  width: 90vw;
+  font-family: sans-serif;
+  cursor: pointer;
+
+  .info-container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 5px 0;
+
+    .video-data {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+
+      .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 1rem;
+
+        width: 25px;
+        height: 25px;
+
+        background: linear-gradient(
+          0deg,
+          rgb(118, 118, 188),
+          rgb(211, 211, 211)
+        );
+
+        border-radius: 50%;
+        text-align: center;
+      }
+
+      .user {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .thumbnail {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+
+    background: linear-gradient(0deg, rgb(103, 154, 211), rgb(154, 242, 219));
+    border-radius: 20px;
+  }
+
+  .title {
+    display: inline-block;
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black;
+
+    padding: 4px 0;
+
+    max-height: 20px; // Prevents elements moving when adding title underline on hover
+
+    text-decoration: none;
+
+    /* Below properties is used to allow ellipsis on title text overflow */
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .comment-icon {
+    position: absolute;
+    bottom: 4px;
+    left: 0px;
+
+    color: #5f6368;
+
+    font-size: 1rem;
+  }
+
+  .comment-data {
+    padding-left: 24px;
+  }
+
+  &:hover .title {
+    text-decoration: underline;
+  }
+}
+
+// Removes link decorations from text
+.remove-link-style {
+  text-decoration: none;
+  color: black;
+}
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .video-container {
+    width: 35rem;
+
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+}
