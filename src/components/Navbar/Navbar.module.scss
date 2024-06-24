@@ -7,7 +7,7 @@
   font-family: sans-serif;
 
   height: 60px;
-  margin: 16px 32px;
+  padding: 16px 32px;
 
   & > * {
     flex: 1;
@@ -21,14 +21,48 @@
     align-items: center;
     justify-content: flex-start;
 
+    width: 200px;
+    max-width: 50vw;
+
     .icon {
       position: absolute;
       left: 12px;
       color: #5f6368;
+
+      z-index: 1;
+    }
+    input:focus + .icon {
+      opacity: 0;
+    }
+
+    .close {
+      position: absolute;
+      left: 4px;
+
+      opacity: 0;
+      z-index: 1;
+      padding: 8px;
+
+      cursor: pointer;
+    }
+    .close:hover {
+      background-color: rgb(139, 67, 67);
+      border-radius: 100px;
+    }
+    input:focus ~ .close {
+      z-index: 1;
+
+      opacity: 1;
+
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
     }
 
     input {
-      max-width: 50%;
+      position: absolute;
+      width: 60px;
+      min-width: 40px;
       background-color: #dbdbdb;
 
       padding: 12px 18px;
@@ -42,7 +76,7 @@
       transition: all 0.2s ease-in-out;
     }
     input:focus {
-      max-width: 100%;
+      width: 50vw;
 
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
@@ -119,7 +153,10 @@
   .navbar {
     .search-container {
       input {
-        width: 100%;
+        width: 120px;
+      }
+      input:focus {
+        width: 600px;
       }
     }
   }
