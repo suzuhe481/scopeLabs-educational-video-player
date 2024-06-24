@@ -37,6 +37,17 @@ const Home = () => {
       });
   }, []);
 
+  // Changes pageVisited value in localStorage to true after a delay to remove splash screen.
+  useEffect(() => {
+    const DELAY_SECONDS = 2; // Can change
+    const DELAY = DELAY_SECONDS * 1000; // Don't change
+
+    setTimeout(() => {
+      setPageVisited(true);
+    }, DELAY);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div>
       <div className="loading-container"></div>
