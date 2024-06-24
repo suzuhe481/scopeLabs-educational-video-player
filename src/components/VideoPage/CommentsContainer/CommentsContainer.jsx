@@ -8,6 +8,8 @@ import { faCommentMedical } from "@fortawesome/free-solid-svg-icons";
 import submitCommentUtil from "../../../helpers/submitCommentUtil";
 import fetchVideoCommentsUtil from "../../../helpers/fetchVideoCommentsUtil";
 
+import { tailspin } from "ldrs";
+
 import styles from "./CommentsContainer.module.scss";
 
 const CommentsContainer = () => {
@@ -16,6 +18,8 @@ const CommentsContainer = () => {
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const [commentFormVisited, setCommentFormVisited] = useState(false);
   const commentFormRef = useRef(null);
+
+  tailspin.register();
 
   var commentCollection = <div>Loading comments...</div>;
 
