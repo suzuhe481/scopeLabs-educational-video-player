@@ -50,7 +50,11 @@ const Navbar = () => {
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
       <div className={`${styles["search-container"]}`}>
-        <input type="text" placeholder="Search Videos..." />
+        <input
+          type="text"
+          placeholder="Search User..."
+          onKeyDown={handleSearch}
+        />
         <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
         <FontAwesomeIcon icon={faX} className={styles.close} />
       </div>
