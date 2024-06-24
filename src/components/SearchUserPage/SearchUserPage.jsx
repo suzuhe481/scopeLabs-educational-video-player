@@ -43,6 +43,14 @@ const SearchUserPage = () => {
   return (
     <div>
       <div className={`${styles["main-content"]}`}>
+        {videoData.length !== 0 ? (
+          <div className={`${styles["user-container"]}`}>
+            <div className={styles.user}>Videos for: {id}</div>
+          </div>
+        ) : (
+          <></>
+        )}
+
         <div className={`${styles["videos-container"]}`}>{videoCollection}</div>
       </div>
     </div>
