@@ -81,16 +81,19 @@
 
 /* Stylings for desktops */
 @media screen and (min-width: 600px) {
-  // Videos are displayed horizontally and wraps.
-  .videos-container {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .main-content {
+    // Videos are displayed horizontally, centered, and wrap to new rows.
+    .videos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, max-content));
+      gap: 24px;
 
-    .video-container {
-      width: 35rem;
+      .video-container {
+        width: 35rem;
 
-      .title {
-        font-size: 1.5rem;
+        .title {
+          font-size: 1.5rem;
+        }
       }
     }
   }
