@@ -162,7 +162,10 @@ const CommentsContainer = () => {
           Comment
         </button>
       </form>
-      <div className={styles.commentCollection}>{commentCollection}</div>
+      <div className={styles.commentCollection}>
+        {commentCollection}
+        {loadMoreCommentsContainer}
+      </div>
     </div>
   );
 };
