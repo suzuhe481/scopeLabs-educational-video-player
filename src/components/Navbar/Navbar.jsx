@@ -37,8 +37,9 @@ const Navbar = () => {
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
       <div className={`${styles["search-container"]}`}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
         <input type="text" placeholder="Search Videos..." />
+        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
+        <FontAwesomeIcon icon={faX} className={styles.close} />
       </div>
 
       <div className={`${styles["logo-container"]}`}>
