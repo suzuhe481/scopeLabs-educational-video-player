@@ -74,6 +74,11 @@ const CommentsContainer = () => {
     }, DELAY);
   };
 
+  // Loading animation element.
+  const commentLoadingAnimation = (
+    <l-tailspin size="40" stroke="5" speed="0.9" color="black"></l-tailspin>
+  );
+
   // Runs when comment textarea has been focused.
   const handleCommentVisited = () => {
     setCommentFormVisited(true);
