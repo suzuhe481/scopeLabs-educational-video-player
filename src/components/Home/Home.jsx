@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
 import fetchAllVideosUtil from "../../helpers/fetchAllVideosUtil";
 
+import useLocalStorage from "../../hooks/useLocalStorage";
+
 import VideoFrame from "../UI/VideoFrame/VideoFrame";
 
 import styles from "./Home.module.scss";
 
 const Home = () => {
   const [videoData, setVideoData] = useState([]);
+  const [pageVisited, setPageVisited] = useLocalStorage("pageVisited", false);
 
   var videoCollection = <div>No videos</div>;
 
