@@ -26,7 +26,7 @@ const CommentsContainer = () => {
   var commentCollection = <div>Loading comments...</div>;
 
   if (commentData) {
-    commentCollection = commentData.map((comment) => {
+    commentCollection = commentData.slice(0, commentLimit).map((comment) => {
       // Converting date to user friendly string with Luxon.
       const comment_created_date = new DateTime(
         comment.created_at
