@@ -4,6 +4,7 @@ import Home from "./components/Home/Home";
 import UploadVideoPage from "./components/UploadVideoPage/UploadVideoPage";
 import VideoPage from "./components/VideoPage/VideoPage";
 import EditVideoPage from "./components/EditVideoPage/EditVideoPage";
+import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 const Router = () => {
   const router = createBrowserRouter([
@@ -22,6 +23,10 @@ const Router = () => {
     {
       path: "/edit/video/:id",
       element: <EditVideoPage />,
+    },
+    {
+      path: "*",
+      element: <ErrorPage />,
     },
   ]);
 
