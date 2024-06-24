@@ -1,0 +1,39 @@
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+
+  .empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: sans-serif;
+    font-size: 2rem;
+
+    padding: 20px 0;
+  }
+}
+
+/* Stylings for desktops */
+@media screen and (min-width: 600px) {
+  .main-content {
+    // Videos are displayed horizontally, centered, and wrap to new rows.
+    .videos-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(35rem, max-content));
+      gap: 24px;
+    }
+  }
+}
