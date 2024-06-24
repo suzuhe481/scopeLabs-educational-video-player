@@ -33,6 +33,9 @@
         flex-direction: column;
         text-align: left;
 
+        width: 100%;
+        overflow-wrap: break-word;
+
         .info-title {
           font-weight: bold;
         }
