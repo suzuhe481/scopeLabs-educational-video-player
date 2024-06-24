@@ -34,6 +34,19 @@ const Navbar = () => {
     window.addEventListener("resize", handleScreenSizeChange);
   });
 
+  // Handles when ENTER is pressed when searching for a user
+  const handleSearch = (e) => {
+    if (e.key === "Enter") {
+      const searchValue = e.target.value.trim();
+
+      if (searchValue === "") {
+        return;
+      } else {
+        window.location.href = `/search/${searchValue}`;
+      }
+    }
+  };
+
   return (
     <div className={`${styles.navbar} ${styles["no-highlight"]}`}>
       <div className={`${styles["search-container"]}`}>
