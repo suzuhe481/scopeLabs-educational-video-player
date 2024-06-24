@@ -4,6 +4,7 @@ import fetchAllVideosUtil from "../../helpers/fetchAllVideosUtil";
 import useLocalStorage from "../../hooks/useLocalStorage";
 
 import VideoFrame from "../UI/VideoFrame/VideoFrame";
+import SplashScreen from "../UI/SplashScreen/SplashScreen";
 
 import styles from "./Home.module.scss";
 
@@ -50,10 +51,15 @@ const Home = () => {
 
   return (
     <div>
-      <div className="loading-container"></div>
-      <div className={`${styles["main-content"]}`}>
-        <div className={`${styles["videos-container"]}`}>{videoCollection}</div>
-      </div>
+      {!pageVisited ? (
+        <SplashScreen />
+      ) : (
+        <div className={`${styles["main-content"]}`}>
+          <div className={`${styles["videos-container"]}`}>
+            {videoCollection}
+          </div>
+        </div>
+      )}
     </div>
   );
 };
