@@ -1,0 +1,28 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 50vh;
+
+  color: black;
+  font-family: sans-serif;
+
+  .error {
+    font-size: 2rem;
+
+    .link {
+      display: block;
+
+      border: 2px solid rgb(0, 0, 0);
+      border-radius: 10px;
+      padding: 0.5rem;
+      margin: 1rem;
+
+      text-decoration: none;
+      text-align: center;
+      color: black;
+    }
+  }
+}
