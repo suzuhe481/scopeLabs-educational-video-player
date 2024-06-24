@@ -79,6 +79,24 @@ const CommentsContainer = () => {
     <l-tailspin size="40" stroke="5" speed="0.9" color="black"></l-tailspin>
   );
 
+  // If...
+  // Comments are loading - Displays loading animation.
+  // Not all comments are displayed - Displays "Load More Comments" button.
+  // Else (All comments displayed) - Displays nothing.
+  const loadMoreCommentsContainer = commentsLoading ? (
+    <div className={`${styles["button-container"]}`}>
+      {commentLoadingAnimation}
+    </div>
+  ) : commentData.length > commentLimit ? (
+    <div className={`${styles["button-container"]}`}>
+      <button className={styles.button} onClick={increaseCommentLimit}>
+        Load More Comments
+      </button>
+    </div>
+  ) : (
+    <></>
+  );
+
   // Runs when comment textarea has been focused.
   const handleCommentVisited = () => {
     setCommentFormVisited(true);
