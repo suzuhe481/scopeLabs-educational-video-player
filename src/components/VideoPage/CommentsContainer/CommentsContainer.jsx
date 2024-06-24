@@ -17,6 +17,8 @@ const CommentsContainer = () => {
   const [commentData, setCommentData] = useState(false);
   const [submitDisabled, setSubmitDisabled] = useState(false);
   const [commentFormVisited, setCommentFormVisited] = useState(false);
+  const [commentLimit, setCommentLimit] = useState(10);
+  const [commentsLoading, setCommentsLoading] = useState(false);
   const commentFormRef = useRef(null);
 
   tailspin.register();
