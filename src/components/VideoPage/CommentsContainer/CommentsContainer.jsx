@@ -59,6 +59,21 @@ const CommentsContainer = () => {
     commentCollection = <div>No comments</div>;
   }
 
+  // Increases comments to be displayed by 10.
+  // Includes artificial load time.
+  const increaseCommentLimit = () => {
+    setCommentsLoading(true);
+
+    const DELAY_SECONDS = 1.5; // Can change
+    const DELAY = DELAY_SECONDS * 1000; // Don't change
+
+    setTimeout(() => {
+      const newCommentLimit = commentLimit + 10;
+      setCommentLimit(newCommentLimit);
+      setCommentsLoading(false);
+    }, DELAY);
+  };
+
   // Runs when comment textarea has been focused.
   const handleCommentVisited = () => {
     setCommentFormVisited(true);
