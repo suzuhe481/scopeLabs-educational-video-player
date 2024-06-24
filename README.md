@@ -2,6 +2,17 @@
 
 A website where users can watch YouTube videos, upload YouTube video links, comment on videos, and search for videos from other users.
 
+## Table of Contents
+
+- [Description](#description)
+- [Getting Started](#getting-started)
+
+  - [Important Information](#important-information)
+  - [Website Design](#website-design)
+
+- [List of all Website features](#list-of-all-website-features)
+- [Screenshots](#screenshots)
+
 ## Description
 
 This is a frontend application which communicates with an API. With the frontend, the user can...
