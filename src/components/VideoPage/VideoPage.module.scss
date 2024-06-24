@@ -75,7 +75,7 @@
     }
     .comment-icon {
       position: absolute;
-      left: 32px;
+      left: 22px;
 
       color: #5f6368;
 
@@ -95,6 +95,12 @@
 
     padding: 0 32px;
     padding-bottom: 50px;
+
+    .info-container {
+      .comment-icon {
+        left: 36px;
+      }
+    }
 
     .more-videos-container {
       flex: 1 1 0; // Works with .main-content's flex property to give a 2:1 ratio
