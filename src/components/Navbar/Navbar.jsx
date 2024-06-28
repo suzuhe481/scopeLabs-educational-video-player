@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 import Logo from "../../assets/images/FULL_LOGO_DARK.png";
 import LogoMobile from "../../assets/images/LOGO_ICON.png";
@@ -19,6 +19,13 @@ const Navbar = () => {
       return false;
     }
   });
+
+  const searchInputRef = useRef(null);
+
+  const handleSearchFocus = (e) => {
+    e.preventDefault();
+    searchInputRef.current.focus();
+  };
 
   // Sets state to determine if user is on a small screen (mobile).
   const handleScreenSizeChange = () => {
@@ -54,8 +61,13 @@ const Navbar = () => {
           type="text"
           placeholder="Search User..."
           onKeyDown={handleSearch}
+          ref={searchInputRef}
         />
-        <FontAwesomeIcon icon={faMagnifyingGlass} className={styles.icon} />
+        <FontAwesomeIcon
+          icon={faMagnifyingGlass}
+          className={styles.icon}
+          onClick={handleSearchFocus}
+        />
         <FontAwesomeIcon icon={faX} className={styles.close} />
       </div>
 
