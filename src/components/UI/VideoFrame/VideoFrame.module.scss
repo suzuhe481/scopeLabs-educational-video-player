@@ -99,7 +99,14 @@
 /* Stylings for desktops */
 @media screen and (min-width: 600px) {
   .video-container {
-    width: 35rem;
+    /* 
+    NOTE: In the width property,
+    the value must equal the first value inside the minmax() function inside the desktop 
+    styles in the Home.module.scss file.
+
+    Current value: 30rem;
+    */
+    width: 30rem;
 
     .title {
       font-size: 1.5rem;
