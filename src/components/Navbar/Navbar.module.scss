@@ -50,10 +50,12 @@
       z-index: 1;
       padding: 6px;
 
+      color: #5f6368;
+
       cursor: pointer;
     }
     .close:hover {
-      background-color: rgb(160, 160, 160);
+      background-color: rgb(165, 165, 165);
       border-radius: 100px;
     }
     // On text input focus, close icon appears and z-index moves to the front.
