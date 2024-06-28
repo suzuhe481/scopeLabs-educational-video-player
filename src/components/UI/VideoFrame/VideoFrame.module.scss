@@ -1,4 +1,8 @@
 .video-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   width: 90vw;
   font-family: sans-serif;
   cursor: pointer;
