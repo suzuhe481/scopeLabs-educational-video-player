@@ -7,7 +7,7 @@
   font-family: sans-serif;
 
   height: 60px;
-  padding: 16px 32px;
+  padding: 8px 8px;
 
   & > * {
     flex: 1;
@@ -151,6 +151,8 @@
 /* Stylings for desktops */
 @media screen and (min-width: 600px) {
   .navbar {
+    padding: 16px 32px;
+
     .search-container {
       input {
         width: 120px;
