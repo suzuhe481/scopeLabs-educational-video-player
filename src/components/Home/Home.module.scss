@@ -20,7 +20,15 @@
     // Videos are displayed horizontally, centered, and wrap to new rows.
     .videos-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(35rem, max-content));
+
+      /* 
+      NOTE: In the grid-template-columns property,
+      the first value inside the minmax() function must equal the "width" value inside the 
+      desktop styles in the VideoFrame.module.scss file.
+
+      Current value: 25rem;
+      */
+      grid-template-columns: repeat(auto-fit, minmax(30rem, max-content));
       gap: 24px;
     }
   }
