@@ -29,28 +29,36 @@
       left: 12px;
       color: #5f6368;
 
-      z-index: 1;
+      z-index: 2;
+
+      cursor: pointer;
     }
+    // On text input focus, search icon disappears and it's z-index moves to the back.
     input:focus + .icon {
       opacity: 0;
+
+      z-index: 1;
     }
 
     .close {
       position: absolute;
-      left: 4px;
+      left: 8px;
+
+      font-size: 14px;
 
       opacity: 0;
       z-index: 1;
-      padding: 8px;
+      padding: 6px;
 
       cursor: pointer;
     }
     .close:hover {
-      background-color: rgb(139, 67, 67);
+      background-color: rgb(160, 160, 160);
       border-radius: 100px;
     }
+    // On text input focus, close icon appears and z-index moves to the front.
     input:focus ~ .close {
-      z-index: 1;
+      z-index: 2;
 
       opacity: 1;
 
