@@ -8,7 +8,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 2 1 0; // Works with .more-videos-container's flex property to give a 2:1 ratio
 
     // Video error element
     .video-not-exist,
@@ -95,6 +94,10 @@
 
     padding: 0 32px;
     padding-bottom: 50px;
+
+    .main-content {
+      flex: 2 1 0; // Works with .more-videos-container's flex property to give a 2:1 ratio
+    }
 
     .info-container {
       .comment-icon {
